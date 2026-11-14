@@ -18,9 +18,9 @@
 
   // karuzela banerow
   var dane=[
+    ['Tapeciarka','Z tapeciarką robota jak błyskawica mknie. Po niej dobry nastrój do domu lgnie.','#p-tapeciarka'],
     ['Texanger','Twój ogród Twoim Teksasem. Bądź jego Rangerem.','#p-texanger'],
     ['Bucior parowy','Stop chwastom… i brudnym podłogom.','#p-bucior'],
-    ['Tapeciarka','Z tapeciarką robota jak błyskawica mknie. Po niej dobry nastrój do domu lgnie.','#p-tapeciarka'],
     ['Pucybut rewolwerowy','Wybierasz się na bal aż do brzasku? Pucybut doda Twoim butom blasku.','#p-pucybut']
   ];
   var sl=d.querySelectorAll('.slajd');

@@ -193,6 +193,21 @@ button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:poin
   .kol{grid-template-columns:1fr 1fr;gap:28px 18px}
   .kol .k5{grid-column:span 2}
 }
+@media (max-width:760px){
+  .scena{min-height:calc(100svh - var(--h));grid-template-rows:auto 1fr}
+  .etap{aspect-ratio:1024/683;min-height:0;max-height:none;background:#fff}
+  .slajd{background-image:none!important;background:#fff}
+  .slajd a{align-items:flex-start}
+  .slajd img{width:100%;height:auto;max-height:100%}
+  .opis{justify-content:space-between;gap:24px;padding:20px 16px 26px}
+}
+@media (max-width:760px) and (min-height:780px){
+  .opis{padding:26px 16px 30px}
+  .opis h2{font-size:37px;margin-bottom:10px}
+  .opis p{font-size:19.5px}
+  .btn{min-height:60px;font-size:19px}
+  .miniatury button{font-size:14.5px;gap:9px}
+}
 @media (max-width:420px){
   .duzy{aspect-ratio:1/1}
   .duzy .tr{grid-template-columns:1fr}

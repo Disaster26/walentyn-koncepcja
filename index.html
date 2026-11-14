@@ -9,7 +9,7 @@
 <meta name="theme-color" content="#ffffff">
 <link rel="preload" href="fonts/jost-rdzen.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="fonts/jost-pl.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" as="image" type="image/webp" href="img/baner-texanger-1024.webp" imagesrcset="img/baner-texanger-480.webp 480w, img/baner-texanger-720.webp 720w, img/baner-texanger-1024.webp 1024w, img/baner-texanger-1440.webp 1440w" imagesizes="(min-width:1024px) calc(100vw - 420px), 100vw" fetchpriority="high">
+<link rel="preload" as="image" type="image/webp" href="img/baner-tapeciarka-1024.webp" imagesrcset="img/baner-tapeciarka-480.webp 480w, img/baner-tapeciarka-720.webp 720w, img/baner-tapeciarka-1024.webp 1024w, img/baner-tapeciarka-1440.webp 1440w, img/baner-tapeciarka-1920.webp 1920w" imagesizes="(min-width:1024px) calc(100vw - 420px), 100vw" fetchpriority="high">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23fff'/%3E%3Cpath d='M7 8h18M7 16h17M7 24h18' stroke='%23000' stroke-width='3.2'/%3E%3C/svg%3E">
 <style>
 @font-face{font-family:Jost;src:url(fonts/jost-rdzen.woff2) format("woff2");font-weight:100 900;font-display:swap;unicode-range:U+0020-007E,U+00A0,U+00A9,U+00D3,U+00F3,U+2013,U+2019,U+201D,U+201E,U+2026}
@@ -194,6 +194,21 @@ button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:poin
   .kol{grid-template-columns:1fr 1fr;gap:28px 18px}
   .kol .k5{grid-column:span 2}
 }
+@media (max-width:760px){
+  .scena{min-height:calc(100svh - var(--h));grid-template-rows:auto 1fr}
+  .etap{aspect-ratio:1024/683;min-height:0;max-height:none;background:#fff}
+  .slajd{background-image:none!important;background:#fff}
+  .slajd a{align-items:flex-start}
+  .slajd img{width:100%;height:auto;max-height:100%}
+  .opis{justify-content:space-between;gap:24px;padding:20px 16px 26px}
+}
+@media (max-width:760px) and (min-height:780px){
+  .opis{padding:26px 16px 30px}
+  .opis h2{font-size:37px;margin-bottom:10px}
+  .opis p{font-size:19.5px}
+  .btn{min-height:60px;font-size:19px}
+  .miniatury button{font-size:14.5px;gap:9px}
+}
 @media (max-width:420px){
   .duzy{aspect-ratio:1/1}
   .duzy .tr{grid-template-columns:1fr}
@@ -239,29 +254,29 @@ button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:poin
 <h1 class="sr">Walentyn - wynalazki do domu i ogrodu: Texanger, Bucior parowy, Tapeciarka i Pucybut rewolwerowy</h1>
 <section class="scena" id="nowosci" aria-roledescription="karuzela" aria-label="Banery produktów">
   <div class="etap" id="etap">
-    <div class="slajd on" style="background-image:url(data:image/webp;base64,UklGRs4BAABXRUJQVlA4IMIBAABQDwCdASrwAGYAPrVQpE8yrKuiIxGqylAWiWdu4D0ZFtmWd3BYfmX4AD7hrZ1LtjqRuECQJG9VzEJ9O3+8wdnr0Mrkp5P/wPCZY8cU/qhbrU1HaByLU7ZM8aFUqjC4ITgLdjN3MtPcDGlF90HpNSOfkr73E9ZXsGCAu9MsKb7EVisAAAD+5TRr5STYWhz27hnPGl7slOzl+wJPTADyAbzsWcniROIk8p5Z6Nam7PgVZqBjLS2tpXkDUnn+n5rVI6C2p0pwoC77NOfL4J+KHbOedncEcNAH+wHalrsEtO2XWGyOsLj1gZvNBK1k/Bim4DnJaNiefVqCL2GtSiocrE+rF6wUiNgZmiw/oi9tVmfh5/N4oZQiDzUVW2rngW3S/SmQxZi7uz3gdx720MDhprP+ryBU0Mf6nyZKVjyQlM91UR9k8cEFEVvB/ZxW7cbaI3IluwqDEoo9yKGF8J9FVtEs0dbtarhGKSqCgLilOL25EOUnr1o1CPE0hlvhjyk4GwDEzzYoppHEYizgP97X5FPFpojtvqdd+P8zSZ0BRBOY/CNAvkR4FfdKrueLbskD+IDpOsjHOOMr2Pt8coF8LIvIAAA=)"><a href="#p-texanger" tabindex="-1"><img src="img/baner-texanger-1024.webp" srcset="img/baner-texanger-480.webp 480w, img/baner-texanger-720.webp 720w, img/baner-texanger-1024.webp 1024w, img/baner-texanger-1440.webp 1440w" sizes="(min-width:1024px) calc(100vw - 420px), 100vw" width="1440" height="610" alt="Baner Texanger: Twój ogród Twoim Teksasem. Bądź jego Rangerem." fetchpriority="high" decoding="async"></a></div>
+    <div class="slajd on" style="background-image:url(data:image/webp;base64,UklGRqwCAABXRUJQVlA4IKACAAAQGgCdASrwAJ0APrVQoEw/tS2qqdU8I/AWiWlu4D35BSnweFwa5oNQJe1mjn0f5fkCj/9hA5cF4yZLfWCqUNhuPPmlyVF4WUCOITpMcb5ja5JA+T0CYujOZWyHoz3VuiqbhD+daRz8rsVIVAVflUixa5wEzEYtYB3+Acu5RmCIo6wOAZU7HOZ9uLDA80RHIlp+QNXgTArz+y9cibce3Gw9hELALmEQv6vkxQGw5jrqwZWXeOqQQR0Hk5rnETUkh3e5kJuP5MhAdBB9QtSPuDr5dx5bO91uPswAAP70gqX5XV20ZR7+0Vz4mgnvqJZyftfMAIL/0evR2Al/2Lkzz99WtBUunQAWaOpSBDzc/BubmRFX8nVJnT1livLIebhdXNGjIyYQhnSVptK80r6pLk8JVptDQ2gQpm7J3HAY4MIHqzXq8BZ4PuuEmsFNoaInM9C4vqnGTor+YF8ZOVGNXDGKG8n9Bh2eON1fS4P2qi14cZPtx7wR+e+yoQYhin9psUA7cZmVH2thUnvCbpDLuAQBhSB0ncR35FfDvofRQeVFV6YTiBtglMjuhdlVHpD056tORaVatiUWZVxuCKR2gFlsWflifkS1yMeFB2i53JFGlJaiMBju1YQKLz51E/jiKP6KgOtSeApjTcfnyo7Obgyi5DMpZFzXKjO7B9Ndghr6dnZMqb5F2D6LQioioDbAU6VD6itOAX0K/nPYflp31BuBTt0E4f9JvGbQnApU/8Sv3ux9vUJDrAXZD6Nr4DOrYtslsskaWrE7mecylBpp2I1uU4mfe6u85N57USnipeQdwbCpbCVBohQ8MNclccJUBWWQtyu7+XCuGdsP7KhP0dvHMEVva8ya+Em/Ew9yAMsakEpYeNO6A9cObIIrEAASAAA=)"><a href="#p-tapeciarka" tabindex="-1"><img src="img/baner-tapeciarka-720.webp" srcset="img/baner-tapeciarka-480.webp 480w, img/baner-tapeciarka-720.webp 720w, img/baner-tapeciarka-1024.webp 1024w, img/baner-tapeciarka-1440.webp 1440w, img/baner-tapeciarka-1920.webp 1920w" sizes="(min-width:1024px) calc(100vw - 420px), 100vw" width="1920" height="1260" alt="Baner Tapeciarka: z tapeciarką robota jak błyskawica mknie." fetchpriority="high" decoding="async"></a></div>
+    <div class="slajd" style="background-image:url(data:image/webp;base64,UklGRs4BAABXRUJQVlA4IMIBAABQDwCdASrwAGYAPrVQpE8yrKuiIxGqylAWiWdu4D0ZFtmWd3BYfmX4AD7hrZ1LtjqRuECQJG9VzEJ9O3+8wdnr0Mrkp5P/wPCZY8cU/qhbrU1HaByLU7ZM8aFUqjC4ITgLdjN3MtPcDGlF90HpNSOfkr73E9ZXsGCAu9MsKb7EVisAAAD+5TRr5STYWhz27hnPGl7slOzl+wJPTADyAbzsWcniROIk8p5Z6Nam7PgVZqBjLS2tpXkDUnn+n5rVI6C2p0pwoC77NOfL4J+KHbOedncEcNAH+wHalrsEtO2XWGyOsLj1gZvNBK1k/Bim4DnJaNiefVqCL2GtSiocrE+rF6wUiNgZmiw/oi9tVmfh5/N4oZQiDzUVW2rngW3S/SmQxZi7uz3gdx720MDhprP+ryBU0Mf6nyZKVjyQlM91UR9k8cEFEVvB/ZxW7cbaI3IluwqDEoo9yKGF8J9FVtEs0dbtarhGKSqCgLilOL25EOUnr1o1CPE0hlvhjyk4GwDEzzYoppHEYizgP97X5FPFpojtvqdd+P8zSZ0BRBOY/CNAvkR4FfdKrueLbskD+IDpOsjHOOMr2Pt8coF8LIvIAAA=)"><a href="#p-texanger" tabindex="-1"><img data-src="img/baner-texanger-1024.webp" data-srcset="img/baner-texanger-480.webp 480w, img/baner-texanger-720.webp 720w, img/baner-texanger-1024.webp 1024w, img/baner-texanger-1440.webp 1440w" sizes="(min-width:1024px) calc(100vw - 420px), 100vw" width="1440" height="610" alt="Baner Texanger: Twój ogród Twoim Teksasem. Bądź jego Rangerem." decoding="async"></a></div>
     <div class="slajd" style="background-image:url(data:image/webp;base64,UklGRuIBAABXRUJQVlA4INYBAACwEACdASrwAIcAPrVQpE+nLKeiIjHKKZAWiWdu3r6ffSofDtPu3boAmFJ7bkgz+EZl6PTFV+1omOWizzeZvuMS87RZkZO20W7Brktvg8+/s3Huk1Xnf01mhdDmRC12cDtSxHpN7RJngpNbDISVM7nsN1fZy37vfsXOGkb2XI3bE0tmvCCzNNzaQUTpGZfgAP7uQ+fO156uXRYrTyDIohaPU5d0deJSrV6fSKOJ/rat+swYCchIjhyhVSNX1nZ8UJb0tG4vyTW1PhnK8J+IEToxgdRpZersZI8ltvshgDZqT9F4x0nMKxiKjg8f95u9W/4hsrmzIr8kpo2vU1Z6cI71eWZzD4k/fS2LxK9VLEosmwz/dKJ4Ej/GPWMneZFUkCPr658ki2/cV8xHh8Sxg6y1dDNRpavLR+rPENK6bCHI3l0R5SVPvYa91OqqQiruGiIB2b7veR6CtOH0XllGToombZkXdsy/YIrpTId+meMR28+TDYmQqxx4VbFIle8gErV9Wkd84svOKLtKR+/H1DblS00O7xsIVHWYZs8p9vS81Verldi1bt9AvuwlAEKEWI84ZYqq7wlKhdL1p5Vc5wtfBRJsYoGI2dk9D+f8I/s2VU+YMkogAA==)"><a href="#p-bucior" tabindex="-1"><img data-src="img/baner-bucior-720.webp" data-srcset="img/baner-bucior-480.webp 480w, img/baner-bucior-720.webp 720w, img/baner-bucior-1024.webp 1024w, img/baner-bucior-1200.webp 1200w" sizes="(min-width:1024px) calc(100vw - 420px), 100vw" width="1200" height="675" alt="Baner Bucior parowy: stop chwastom i brudnym podłogom." decoding="async"></a></div>
-    <div class="slajd" style="background-image:url(data:image/webp;base64,UklGRqwCAABXRUJQVlA4IKACAAAQGgCdASrwAJ0APrVQoEw/tS2qqdU8I/AWiWlu4D35BSnweFwa5oNQJe1mjn0f5fkCj/9hA5cF4yZLfWCqUNhuPPmlyVF4WUCOITpMcb5ja5JA+T0CYujOZWyHoz3VuiqbhD+daRz8rsVIVAVflUixa5wEzEYtYB3+Acu5RmCIo6wOAZU7HOZ9uLDA80RHIlp+QNXgTArz+y9cibce3Gw9hELALmEQv6vkxQGw5jrqwZWXeOqQQR0Hk5rnETUkh3e5kJuP5MhAdBB9QtSPuDr5dx5bO91uPswAAP70gqX5XV20ZR7+0Vz4mgnvqJZyftfMAIL/0evR2Al/2Lkzz99WtBUunQAWaOpSBDzc/BubmRFX8nVJnT1livLIebhdXNGjIyYQhnSVptK80r6pLk8JVptDQ2gQpm7J3HAY4MIHqzXq8BZ4PuuEmsFNoaInM9C4vqnGTor+YF8ZOVGNXDGKG8n9Bh2eON1fS4P2qi14cZPtx7wR+e+yoQYhin9psUA7cZmVH2thUnvCbpDLuAQBhSB0ncR35FfDvofRQeVFV6YTiBtglMjuhdlVHpD056tORaVatiUWZVxuCKR2gFlsWflifkS1yMeFB2i53JFGlJaiMBju1YQKLz51E/jiKP6KgOtSeApjTcfnyo7Obgyi5DMpZFzXKjO7B9Ndghr6dnZMqb5F2D6LQioioDbAU6VD6itOAX0K/nPYflp31BuBTt0E4f9JvGbQnApU/8Sv3ux9vUJDrAXZD6Nr4DOrYtslsskaWrE7mecylBpp2I1uU4mfe6u85N57USnipeQdwbCpbCVBohQ8MNclccJUBWWQtyu7+XCuGdsP7KhP0dvHMEVva8ya+Em/Ew9yAMsakEpYeNO6A9cObIIrEAASAAA=)"><a href="#p-tapeciarka" tabindex="-1"><img data-src="img/baner-tapeciarka-720.webp" data-srcset="img/baner-tapeciarka-480.webp 480w, img/baner-tapeciarka-720.webp 720w, img/baner-tapeciarka-1024.webp 1024w, img/baner-tapeciarka-1440.webp 1440w, img/baner-tapeciarka-1920.webp 1920w" sizes="(min-width:1024px) calc(100vw - 420px), 100vw" width="1920" height="1260" alt="Baner Tapeciarka: z tapeciarką robota jak błyskawica mknie." decoding="async"></a></div>
     <div class="slajd" style="background-image:url(data:image/webp;base64,UklGRloCAABXRUJQVlA4IE4CAADwFwCdASrwAKAAPrVUo06nMasmI/DrGjAWiWlu4DBpru+VEWnhQ2wmFtNlh10MV6Ln2/cA+W4g4wV+lmwQAAHG6H/oQvWSEMZY6rRyOcjncSnVRK64mjLfL/CFZDIX9nncKQ/qbDnTWVD9DeLiMvC9K+UjFWdXVRuPwH5qWVa4BDE4wHA3HWNi8L/tOXMy67oBUcUR+TX8pcY1FLCT+DY24ENmsEMbqoXa1QSWPmVtNvkF70TYWMyMDorVobq5mNfk0wvorNIAsAD+8I3ONe8N+7L04HDgiez9OxFGwdkGFZw0D3A1czQnFencQkmsvVpD0x5n6EpTd4NivVgRD1tOxohIYpUCoOx7zd0SPmu3/09lnoqKM3wuhw9NcKiEe9RHN65Ctwcp2fL/p9e45ce+l4sbtdNarJXwiY4Cqvn9P8UQWteAAy8gzMku1bTQ3ZpeBrD+Hbqce0lSvNKaU4Il79OR6aFrvZwb9IqPUZK7O/PP0yseHPuDn78WOxdGqDA0ZztHywtJE2wOfIA7I1Hovhox/zvzvs+hs2qbWFwSHq7uB5KzB/s6PRdoN4LgQuzeY7RP6r5zWb+41+cYzYunbsazlQElWd5OOTKfKE7IJXemRwttDr/m4Z6qWRYLZupB1+Q8HehSZMbeHfEC1En2Zcyb7q82Wdbn4BLrgUwCK/GEcMust7IPCHhlEGxMAMjDeY1n9gBBTKn/hIP5JP5iv3Bknkk25py11qOtwN/JlsEquVCWQpJvou9wvmeflorH9D50RtjpuR4TEMAAAA==)"><a href="#p-pucybut" tabindex="-1"><img data-src="img/baner-pucybut-720.webp" data-srcset="img/baner-pucybut-480.webp 480w, img/baner-pucybut-720.webp 720w, img/baner-pucybut-1024.webp 1024w" sizes="(min-width:1024px) calc(100vw - 420px), 100vw" width="1024" height="683" alt="Baner Pucybut rewolwerowy: doda Twoim butom blasku." decoding="async"></a></div>
   </div>
   <div class="opis">
     <div class="belki" role="group" aria-label="Wybierz baner">
-      <button type="button" aria-current="true"><span class="sr">Texanger</span></button>
+      <button type="button" aria-current="true"><span class="sr">Tapeciarka</span></button>
+      <button type="button" aria-current="false"><span class="sr">Texanger</span></button>
       <button type="button" aria-current="false"><span class="sr">Bucior parowy</span></button>
-      <button type="button" aria-current="false"><span class="sr">Tapeciarka</span></button>
       <button type="button" aria-current="false"><span class="sr">Pucybut rewolwerowy</span></button>
     </div>
     <div class="opis-tekst" aria-live="polite">
-      <div class="ot on"><h2>Texanger</h2><p>Twój ogród Twoim Teksasem. Bądź jego Rangerem.</p></div>
+      <div class="ot on"><h2>Tapeciarka</h2><p>Z tapeciarką robota jak błyskawica mknie. Po niej dobry nastrój do domu lgnie.</p></div>
+      <div class="ot" aria-hidden="true"><h2>Texanger</h2><p>Twój ogród Twoim Teksasem. Bądź jego Rangerem.</p></div>
       <div class="ot" aria-hidden="true"><h2>Bucior parowy</h2><p>Stop chwastom… i brudnym podłogom.</p></div>
-      <div class="ot" aria-hidden="true"><h2>Tapeciarka</h2><p>Z tapeciarką robota jak błyskawica mknie. Po niej dobry nastrój do domu lgnie.</p></div>
       <div class="ot" aria-hidden="true"><h2>Pucybut rewolwerowy</h2><p>Wybierasz się na bal aż do brzasku? Pucybut doda Twoim butom blasku.</p></div>
     </div>
-    <a class="btn" id="o-link" href="#p-texanger">Zobacz produkt <i aria-hidden="true"><b></b><b></b><b></b></i></a>
+    <a class="btn" id="o-link" href="#p-tapeciarka">Zobacz produkt <i aria-hidden="true"><b></b><b></b><b></b></i></a>
     <div class="miniatury" role="group" aria-label="Produkty">
-      <button type="button" aria-current="true"><span class="m"><img src="img/produkt-texanger-360.webp" width="360" height="360" alt="" loading="lazy"></span>Texanger</button>
+      <button type="button" aria-current="true"><span class="m"><img src="img/produkt-tapeciarka-360.webp" width="360" height="360" alt="" loading="lazy"></span>Tapeciarka</button>
+      <button type="button" aria-current="false"><span class="m"><img src="img/produkt-texanger-360.webp" width="360" height="360" alt="" loading="lazy"></span>Texanger</button>
       <button type="button" aria-current="false"><span class="m"><img src="img/produkt-bucior-360.webp" width="360" height="360" alt="" loading="lazy"></span>Bucior parowy</button>
-      <button type="button" aria-current="false"><span class="m"><img src="img/produkt-tapeciarka-360.webp" width="360" height="360" alt="" loading="lazy"></span>Tapeciarka</button>
       <button type="button" aria-current="false"><span class="m"><img src="img/produkt-pucybut-360.webp" width="360" height="360" alt="" loading="lazy"></span>Pucybut</button>
     </div>
   </div>
