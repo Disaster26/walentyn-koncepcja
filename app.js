@@ -30,7 +30,9 @@
   var akt=0,timer=null,ruch=!window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   function idz(i){
     if(typeof dociagnij==='function')dociagnij();
-    akt=(i+sl.length)%sl.length;
+    var cel=(i+sl.length)%sl.length,im=sl[cel].querySelector('img');
+    if(im&&!im.complete){im.addEventListener('load',function(){idz(cel);},{once:true});return;}
+    akt=cel;
     for(var k=0;k<sl.length;k++){var on=k===akt;sl[k].classList.toggle('on',on);be[k].setAttribute('aria-current',on);mi[k].setAttribute('aria-current',on);}
     for(var j=0;j<ot.length;j++){ot[j].classList.toggle('on',j===akt);if(j===akt)ot[j].removeAttribute('aria-hidden');else ot[j].setAttribute('aria-hidden','true');}ln.href=dane[akt][2];
   }
