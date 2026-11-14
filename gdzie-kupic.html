@@ -1,0 +1,272 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Gdzie kupić? - Walentyn</title>
+<meta name="description" content="Wynalazki Bartosza Walentyna: Texanger, Bucior parowy, Tapeciarka i Pucybut rewolwerowy. Produkty, nowości, wsparcie techniczne i gdzie kupić.">
+<meta name="robots" content="noindex,nofollow">
+<meta name="theme-color" content="#ffffff">
+<link rel="preload" href="fonts/jost-rdzen.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/jost-pl.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23fff'/%3E%3Cpath d='M7 8h18M7 16h17M7 24h18' stroke='%23000' stroke-width='3.2'/%3E%3C/svg%3E">
+<style>
+@font-face{font-family:Jost;src:url(fonts/jost-rdzen.woff2) format("woff2");font-weight:100 900;font-display:swap;unicode-range:U+0020-007E,U+00A0,U+00A9,U+00D3,U+00F3,U+2013,U+2019,U+201D,U+201E,U+2026}
+@font-face{font-family:Jost;src:url(fonts/jost-pl.woff2) format("woff2");font-weight:100 900;font-display:swap;unicode-range:U+0104-0107,U+0118-0119,U+0141-0144,U+015A-015B,U+0179-017C}
+@font-face{font-family:JostZ;src:local("Arial");size-adjust:97%;ascent-override:104%;descent-override:36%}
+:root{--czern:#0B0B0C;--tekst:#141517;--szary:#5C6067;--linia:#E3E5E9;--tlo2:#F1F2F4;--czerwien:#ED1B24;--czerwien2:#B10F16;--przycisk:#D1141C;--h:72px}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-padding-top:var(--h)}
+body{margin:0;background:#fff;color:var(--tekst);font:400 17px/1.55 Jost,JostZ,system-ui,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:pointer}
+.sr{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+:focus-visible{outline:2px solid var(--czerwien);outline-offset:3px}
+
+/* naglowek */
+.top{position:sticky;top:0;z-index:50;background:#fff;border-bottom:1px solid var(--linia)}
+.top-in{height:calc(var(--h) - 1px);display:flex;align-items:center;gap:40px;padding:0 clamp(16px,3vw,48px);max-width:1920px;margin:0 auto}
+.logo{display:block;color:#000;flex:none;line-height:0}
+.logo svg{width:168px;height:auto}
+.nav{display:flex;gap:34px;margin-right:auto}
+.nav a{text-decoration:none;font-weight:500;font-size:17px;position:relative;padding:6px 0}
+.nav a::after{content:"";position:absolute;left:0;right:100%;bottom:0;height:2px;background:var(--czerwien);transition:right .25s ease}
+.nav a:hover::after,.nav a[aria-current]::after{right:0}
+.akcje{display:flex;align-items:center;gap:6px}
+.akcja{display:inline-flex;align-items:center;gap:9px;height:44px;padding:0 12px;text-decoration:none;font-weight:500;font-size:16px;border-radius:2px}
+.akcja:hover{color:var(--czerwien)}
+.akcja svg{width:26px;height:26px;flex:none}
+.menu-btn{display:none;width:44px;height:44px;align-items:center;justify-content:center}
+.menu-btn svg{width:26px;height:26px}
+.menu-btn path{transition:transform .25s ease,opacity .2s;transform-box:fill-box;transform-origin:center}
+.menu-btn[aria-expanded=true] .b1{transform:translate(0,6px) rotate(45deg) scaleX(.85)}
+.menu-btn[aria-expanded=true] .b3{transform:translate(0,-6px) rotate(-45deg) scaleX(.85)}
+.menu-btn[aria-expanded=true] .b2{opacity:0}
+.szukaj{border-top:1px solid var(--linia);background:#fff}
+.szukaj[hidden]{display:none}
+.szukaj-in{max-width:880px;margin:0 auto;padding:22px clamp(16px,3vw,48px) 26px}
+.szukaj label{display:block;font-weight:500;margin-bottom:8px}
+.szukaj input{width:100%;height:54px;border:0;border-bottom:2px solid var(--czern);font:inherit;font-size:22px;padding:0 2px;background:transparent;border-radius:0}
+.szukaj input::-webkit-search-cancel-button{-webkit-appearance:none;appearance:none}
+.szukaj input:focus{outline:none;border-bottom-color:var(--czerwien)}
+.szukaj ul{list-style:none;margin:14px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:8px 22px}
+.szukaj li a{text-decoration:none;font-size:17px}
+.szukaj li a:hover{color:var(--czerwien)}
+.szukaj .brak{color:var(--szary);margin:14px 0 0}
+.mnav{display:none}
+
+/* scena banerow */
+.scena{display:grid;grid-template-columns:1fr 420px;height:calc(100svh - var(--h));min-height:600px;max-height:1200px;background:#fff}
+.etap{position:relative;overflow:hidden;background:#141414;touch-action:pan-y;user-select:none}
+.slajd{position:absolute;inset:0;opacity:0;visibility:hidden;transition:opacity .6s ease,visibility 0s linear .6s;background-size:cover;background-position:center}
+.slajd.on{opacity:1;visibility:visible;transition:opacity .6s ease}
+.slajd a{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;padding:clamp(16px,3vw,44px)}
+.slajd img{max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain;box-shadow:0 18px 50px rgba(0,0,0,.35);-webkit-user-drag:none}
+.opis{display:flex;flex-direction:column;justify-content:center;gap:26px;padding:40px 44px;border-left:1px solid var(--linia)}
+.belki{display:flex;gap:8px}
+.belki button{width:44px;height:24px;position:relative}
+.belki button::before{content:"";position:absolute;left:0;right:0;top:10px;height:4px;background:#D4D7DC;transition:background .2s}
+.belki button[aria-current=true]::before{background:var(--czerwien)}
+.belki button:hover::before{background:#9DA1A8}
+.belki button[aria-current=true]:hover::before{background:var(--czerwien)}
+.opis-tekst{display:grid}
+.ot{grid-area:1/1;visibility:hidden;opacity:0;transition:opacity .4s ease}
+.ot.on{visibility:visible;opacity:1}
+.opis h2{font-size:clamp(32px,2.6vw,44px);line-height:1.06;font-weight:500;margin:0 0 14px;letter-spacing:-.01em}
+.opis p{margin:0;color:var(--szary);font-size:19px;line-height:1.45}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:12px;min-height:54px;padding:0 26px;background:var(--przycisk);color:#fff;text-decoration:none;font-weight:500;font-size:18px;border-radius:2px;align-self:flex-start;transition:background .2s}
+.btn:hover{background:var(--czerwien2)}
+.btn i{display:inline-flex;flex-direction:column;gap:3px;width:16px}
+.btn i b{display:block;height:2px;background:currentColor;transition:transform .25s ease}
+.btn i b:nth-child(2){width:80%}
+.btn:hover i b{transform:translateX(4px)}
+.btn:hover i b:nth-child(2){transform:translateX(7px)}
+.miniatury{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;border-top:1px solid var(--linia);padding-top:22px}
+.miniatury button{display:flex;flex-direction:column;gap:7px;text-align:left;font-size:14px;line-height:1.2;color:var(--szary)}
+.miniatury span.m{display:block;aspect-ratio:1;background:radial-gradient(circle at 50% 55%,#2a2b2f 0,#0B0B0C 70%);border:2px solid transparent;transition:border-color .2s}
+.miniatury img{width:100%;height:100%;object-fit:contain;padding:8%}
+.miniatury button[aria-current=true]{color:var(--tekst)}
+.miniatury button[aria-current=true] span.m{border-color:var(--czerwien)}
+.miniatury button:hover span.m{border-color:#9DA1A8}
+.miniatury button[aria-current=true]:hover span.m{border-color:var(--czerwien)}
+
+/* wynalazki - czarne tlo */
+.wynalazki{background:var(--czern);color:#fff;padding:clamp(56px,6vw,96px) 0 0}
+.sek-in{max-width:1680px;margin:0 auto;padding:0 clamp(16px,3vw,48px)}
+.sek-glowa{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;margin-bottom:clamp(28px,3vw,44px)}
+.sek-glowa h2{font-size:clamp(34px,3.4vw,54px);line-height:1.05;font-weight:500;margin:0;letter-spacing:-.01em}
+.sek-glowa p{margin:0;max-width:440px;color:#A7AAB0;font-size:18px}
+.kafle4{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid #26272B}
+.kafel{position:relative;display:flex;flex-direction:column;text-decoration:none;padding:clamp(22px,2vw,34px);border-right:1px solid #26272B;min-height:0;overflow:hidden}
+.kafel:last-child{border-right:0}
+.kafel .fot{aspect-ratio:1;margin:0 0 18px;background:radial-gradient(circle at 50% 56%,#2b2c31 0,#141518 46%,var(--czern) 72%)}
+.kafel .fot img{width:100%;height:100%;object-fit:contain;padding:6%;transition:transform .5s cubic-bezier(.2,.7,.2,1)}
+.kafel:hover .fot img{transform:scale(1.04)}
+.kafel h3{margin:0 0 6px;font-size:clamp(22px,1.7vw,28px);font-weight:500;line-height:1.15}
+.kafel p{margin:0 0 22px;color:#A7AAB0;font-size:16.5px;line-height:1.45}
+.znak3{margin-top:auto;display:flex;flex-direction:column;gap:5px;width:58px}
+.znak3 b{display:block;height:3px;background:#fff;transition:width .3s ease,background .3s ease;width:100%}
+.znak3 b:nth-child(2){width:92%}
+.kafel:hover .znak3 b{background:var(--czerwien)}
+.kafel:hover .znak3 b:nth-child(1){width:150%}
+.kafel:hover .znak3 b:nth-child(2){width:120%}
+.kafel:hover .znak3 b:nth-child(3){width:170%}
+
+/* dwa duze kafle */
+.duze{background:var(--tlo2);padding:clamp(16px,2.4vw,40px) 0 clamp(18px,2vw,30px)}
+.duze .sek-in{display:grid;grid-template-columns:1fr 1fr;gap:clamp(12px,1.6vw,24px)}
+.duzy{position:relative;display:block;overflow:hidden;color:#fff;text-decoration:none;aspect-ratio:16/10;min-height:340px;background:#222}
+.duzy img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .7s cubic-bezier(.2,.7,.2,1)}
+.duzy:hover img{transform:scale(1.03)}
+.duzy::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,11,12,0) 30%,rgba(11,11,12,.82) 100%)}
+.duzy .tr{position:absolute;left:0;right:0;bottom:0;z-index:1;padding:clamp(22px,2.6vw,40px);display:grid;grid-template-columns:auto 1fr;gap:6px 22px;align-items:end}
+.duzy svg{width:clamp(52px,4.4vw,72px);height:auto;grid-row:span 2;align-self:center}
+.duzy h2{margin:0;font-size:clamp(28px,2.6vw,42px);line-height:1.08;font-weight:500}
+.duzy p{margin:0;color:#E2E4E8;font-size:17px;max-width:460px}
+.duzy:hover h2{text-decoration:underline;text-decoration-color:var(--czerwien);text-decoration-thickness:3px;text-underline-offset:6px}
+.prawa{max-width:1680px;margin:12px auto 0;padding:0 clamp(16px,3vw,48px);font-size:13px;color:#5A5E65}
+
+/* stopka */
+.stopka{background:#fff;padding:clamp(48px,5vw,80px) 0 28px}
+.sep3{display:flex;flex-direction:column;gap:6px;width:72px;margin-bottom:34px}
+.sep3 b{height:3px;background:var(--czern)}
+.sep3 b:nth-child(2){width:94%}
+.sep3 b:nth-child(3){background:var(--czerwien)}
+.kol{display:grid;grid-template-columns:repeat(5,1fr);gap:32px 28px}
+.kol h3{margin:0 0 14px;font-size:17px;font-weight:600}
+.kol ul{list-style:none;margin:0;padding:0}
+.kol li{margin:0 0 8px}
+.kol a{text-decoration:none;color:#3F4349;font-size:16px}
+.kol a:hover{color:var(--czerwien)}
+.dol{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px 28px;margin-top:48px;padding-top:22px;border-top:1px solid var(--linia);color:#3F4349;font-size:15px}
+.dol .logo svg{width:120px}
+.dol-l{display:flex;align-items:center;gap:22px;flex-wrap:wrap}
+.wylinka-badge{display:inline-flex;align-items:center;gap:.4em;color:inherit;text-decoration:none;font-size:.875em;line-height:1;opacity:.85}
+.wylinka-badge:hover,.wylinka-badge:focus-visible{opacity:1}
+.wylinka-badge:focus-visible{outline:2px solid currentColor;outline-offset:3px;border-radius:2px}
+.wylinka-badge svg{width:18px;height:18px;flex:none;overflow:visible}
+.wylinka-badge b{font-weight:600}
+.wylinka-badge .wy-old{opacity:.45;transform-origin:40px 30px;transition:transform .32s cubic-bezier(.3,.7,.4,1),opacity .32s ease-out}
+.wylinka-badge .wy-pod{opacity:0;transition:opacity .2s ease-out .08s}
+.wylinka-badge:hover .wy-old,.wylinka-badge:focus-visible .wy-old{transform:translate(9px,7px) rotate(9deg);opacity:0}
+.wylinka-badge:hover .wy-pod,.wylinka-badge:focus-visible .wy-pod{opacity:1}
+@media (prefers-reduced-motion:reduce){.wylinka-badge .wy-old,.wylinka-badge .wy-pod{transition:none}.wylinka-badge:hover .wy-old,.wylinka-badge:focus-visible .wy-old{transform:none;opacity:.45}.wylinka-badge:hover .wy-pod,.wylinka-badge:focus-visible .wy-pod{opacity:0}}
+
+@media (max-width:1180px){
+  .scena{grid-template-columns:1fr 360px}
+  .opis{padding:32px 30px}
+  .nav{gap:24px}
+  .akcja .t{display:none}
+}
+@media (max-width:1023px){
+  :root{--h:62px}
+  .top-in{gap:12px}
+  .logo svg{width:138px}
+  .nav{display:none}
+  .akcje{margin-left:auto;gap:0}
+  .akcja{padding:0 9px}
+  .menu-btn{display:inline-flex}
+  .mnav{border-top:1px solid var(--linia);background:#fff}
+  .mnav.otw{display:block}
+  .mnav a{display:block;padding:15px clamp(16px,3vw,48px);font-size:21px;font-weight:500;text-decoration:none;border-bottom:1px solid var(--linia)}
+  .mnav a:last-child{border-bottom:0;color:var(--czerwien)}
+  .scena{grid-template-columns:1fr;height:auto;min-height:calc(100svh - var(--h));max-height:none;grid-template-rows:1fr auto}
+  .etap{min-height:66.6vw;max-height:80vw;width:100%}
+  .slajd a{padding:0}
+  .slajd img{box-shadow:none}
+  .opis{border-left:0;padding:20px 16px 22px;gap:26px;justify-content:center}
+  .opis h2{font-size:31px;margin-bottom:8px}
+  .opis p{font-size:17.5px}
+  .btn{align-self:stretch}
+  .miniatury{padding-top:18px;gap:10px}
+  .miniatury button{font-size:13px}
+  .kafle4{grid-template-columns:1fr 1fr}
+  .kafel{padding:18px 14px 22px}
+  .kafel:nth-child(2n){border-right:0}
+  .kafel:nth-child(-n+2){border-bottom:1px solid #26272B}
+  .kafel p{font-size:15px;margin-bottom:18px}
+  .sek-glowa{flex-direction:column;align-items:flex-start;gap:10px}
+  .sek-glowa p{font-size:17px}
+  .duze .sek-in{grid-template-columns:1fr}
+  .duzy{aspect-ratio:4/3;min-height:0}
+  .kol{grid-template-columns:1fr 1fr;gap:28px 18px}
+  .kol .k5{grid-column:span 2}
+}
+@media (max-width:420px){
+  .duzy{aspect-ratio:1/1}
+  .duzy .tr{grid-template-columns:1fr}
+  .duzy svg{grid-row:auto;width:48px;margin-bottom:6px}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+.gk{padding:clamp(48px,6vw,96px) 0;background:var(--tlo2)}
+.gk h1{font-size:clamp(34px,3.4vw,54px);font-weight:500;line-height:1.05;margin:0 0 14px}
+.gk-lead{max-width:640px;color:var(--szary);font-size:19px;margin:0 0 32px}
+.gk-kafel{display:flex;flex-direction:column;gap:8px;max-width:640px;padding:28px;border:2px dashed #B9BDC4;background:#fff}
+.gk-kafel b{font-size:22px;font-weight:500}
+.gk-kafel span{color:var(--szary)}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="top-in">
+    <a class="logo" href="./" aria-label="Walentyn - strona główna">
+      <svg viewBox="84 143 936 125" role="img" aria-hidden="true"><defs><clipPath id="lc"><rect x="80" y="145" width="945" height="121"/></clipPath></defs><g clip-path="url(#lc)" fill="none" stroke="currentColor" stroke-width="10" stroke-linejoin="miter" stroke-miterlimit="10"><polyline points="86,131 134.5,272 177.5,139 221,272 270,131"/><polyline points="269,282 327.5,139 386,282"/><line x1="287" y1="232" x2="368" y2="232"/><line x1="575" y1="138" x2="672" y2="273"/><polyline points="796,136 845,208 894,136"/><line x1="916" y1="138" x2="1013" y2="273"/></g><g fill="currentColor"><rect x="399" y="145" width="10" height="121"/><rect x="399" y="256" width="68" height="10"/><rect x="484" y="145" width="63" height="10"/><rect x="484" y="200" width="62" height="10"/><rect x="484" y="256" width="65" height="10"/><rect x="570" y="145" width="10" height="121"/><rect x="667" y="145" width="10" height="121"/><rect x="694" y="145" width="97" height="10"/><rect x="737.5" y="145" width="10" height="121"/><rect x="840" y="204" width="10" height="62"/><rect x="911" y="145" width="10" height="121"/><rect x="1008" y="145" width="10" height="121"/></g></svg>
+    </a>
+    <nav class="nav" aria-label="Menu główne">
+      <a href="./#produkty">Produkty</a>
+      <a href="./#nowosci">Nowości</a>
+      <a href="./#wsparcie">Wsparcie techniczne</a>
+    </nav>
+    <div class="akcje">
+      <a class="akcja" href="gdzie-kupic.html" aria-current="page" title="Gdzie kupić?"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M5 12h22l-2 15H7z"/><path d="M11 12V9a5 5 0 0 1 10 0v3"/><path d="M11 17h10M11 21h9"/></svg><span class="t">Gdzie kupić?</span><span class="sr">Gdzie kupić?</span></a>
+      <button class="akcja" type="button" id="szukaj-btn" aria-expanded="false" aria-controls="szukaj"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="13.5" cy="13.5" r="8"/><path d="M19.5 19.5l7.5 7.5"/></svg><span class="sr">Szukaj</span></button>
+      <button class="menu-btn" type="button" id="menu-btn" aria-expanded="false" aria-controls="mnav"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path class="b1" d="M5 10h21"/><path class="b2" d="M5 16h20.5"/><path class="b3" d="M5 22h22"/></svg><span class="sr">Menu</span></button>
+    </div>
+  </div>
+  <nav class="mnav" id="mnav" aria-label="Menu mobilne">
+    <a href="./#produkty">Produkty</a>
+    <a href="./#nowosci">Nowości</a>
+    <a href="./#wsparcie">Wsparcie techniczne</a>
+    <a href="gdzie-kupic.html">Gdzie kupić?</a>
+  </nav>
+  <div class="szukaj" id="szukaj" hidden>
+    <div class="szukaj-in">
+      <label for="q">Czego szukasz?</label>
+      <input id="q" type="search" autocomplete="off" placeholder="np. Tapeciarka">
+      <ul id="wyniki"></ul>
+      <p class="brak" id="brak" hidden>Nic nie znaleziono. Spróbuj innej nazwy.</p>
+    </div>
+  </div>
+</header>
+
+<main class="gk">
+<div class="sek-in">
+<h1>Gdzie kupić?</h1>
+<p class="gk-lead">Sklepy i punkty, w których można kupić Texangera, Bucior parowy, Tapeciarkę i Pucybut rewolwerowy.</p>
+<div class="gk-kafel"><b>Tu Państwa opis</b><span>Lista sklepów stacjonarnych i internetowych (nazwa, miasto, link), ewentualnie zakup bezpośrednio u producenta. Uzupełnię po otrzymaniu danych.</span></div>
+</div>
+</main>
+
+<footer class="stopka">
+  <div class="sek-in">
+    <div class="sep3" aria-hidden="true"><b></b><b></b><b></b></div>
+    <div class="kol">
+      <div><h3>Dla klienta</h3><ul><li><a href="./#">Facebook</a></li><li><a href="./#filmy">Filmy promocyjne</a></li><li><a href="./#">Blog</a></li><li><a href="./#">Historie naszych klientów</a></li></ul></div>
+      <div><h3>Wsparcie techniczne</h3><ul><li><a href="./#wsparcie">Pomoc techniczna online</a></li><li><a href="./#">Serwisy</a></li><li><a href="./#">Gwarancja</a></li><li><a href="./#">Pogotowie techniczne</a></li></ul></div>
+      <div><h3>Aktualności</h3><ul><li><a href="./#">Centrum prasowe</a></li><li><a href="./#">Nagrody</a></li><li><a href="./#">RSS</a></li></ul></div>
+      <div><h3>Do pobrania</h3><ul><li><a href="./#">Broszury</a></li></ul></div>
+      <div class="k5"><h3>O nas</h3><ul><li><a href="./#">O nas</a></li><li><a href="./#">Misja i wizja</a></li><li><a href="./#">Historia firmy</a></li><li><a href="./#">Informacje dla inwestorów</a></li><li><a href="./#">Społeczna odpowiedzialność biznesu</a></li></ul></div>
+    </div>
+    <div class="dol">
+      <div class="dol-l">
+        <a class="logo" href="./" aria-label="Walentyn"><svg viewBox="84 143 936 125" aria-hidden="true"><defs><clipPath id="lc2"><rect x="80" y="145" width="945" height="121"/></clipPath></defs><g clip-path="url(#lc2)" fill="none" stroke="currentColor" stroke-width="10" stroke-linejoin="miter" stroke-miterlimit="10"><polyline points="86,131 134.5,272 177.5,139 221,272 270,131"/><polyline points="269,282 327.5,139 386,282"/><line x1="287" y1="232" x2="368" y2="232"/><line x1="575" y1="138" x2="672" y2="273"/><polyline points="796,136 845,208 894,136"/><line x1="916" y1="138" x2="1013" y2="273"/></g><g fill="currentColor"><rect x="399" y="145" width="10" height="121"/><rect x="399" y="256" width="68" height="10"/><rect x="484" y="145" width="63" height="10"/><rect x="484" y="200" width="62" height="10"/><rect x="484" y="256" width="65" height="10"/><rect x="570" y="145" width="10" height="121"/><rect x="667" y="145" width="10" height="121"/><rect x="694" y="145" width="97" height="10"/><rect x="737.5" y="145" width="10" height="121"/><rect x="840" y="204" width="10" height="62"/><rect x="911" y="145" width="10" height="121"/><rect x="1008" y="145" width="10" height="121"/></g></svg></a>
+        <span>© <span id="rok">2026</span> Walentyn</span>
+      </div>
+      <a class="wylinka-badge" href="https://wylinka.pl/?utm_source=walentyn.pl&amp;utm_medium=stopka&amp;utm_campaign=wykonanie" rel="noopener" title="Strona wykonana przez Wylinka"><svg viewBox="0 0 64 64" aria-hidden="true" focusable="false" fill="currentColor"><path d="M9.8 22.8l-1.2-7.9 2.2-3.7 15.5 4.6-.5 1.5-7.2 5.5 4.7 15.6 5-15.6 7 0 4.1 12.7-4.2-.9-2.6 1.8-.8-2.2-5.3 15.6-4.3 0 .4 .2-2.1 2.8-1.3-1.1 1.1-1.4-3.1 .2-.1-1.7 2.2-.1-5.7-16.5-4.8 .6-.8 3.1 0 .5-.3 .5 .8 2.2-1.6 .5-.4-1.3-.8 1.6-1.5-.8 .8-1.6-1.4 .6-.6-1.6 2.3-.8 .2-.4 1.3-4.8 5.9-.8-2.4-6.9zM15.2 13.7l-.1-.4-.4 .8-.1 .8 .1 1 .1 .4 .3 .7 .3-.9 .1-.7 0-.8z"/><path class="wy-pod" d="M37.1 49.8l-4.5-13.3 2.6-1.8 4.2 .9 .9 2.8 3-9.7 0-.5 .1-.8 3.2-8.4 .5-1 .6-1 .9-1.1 1.3-1 1.1-.7 1.4-.5 1.4-.3 .7 0 .9 0 1.2 .3 1.4 .6 .8 .5 .7 .7 .6 .7 .5 .9 .3 .9 .1 .9 0 .8-.2 .9-.5 .9-.5 .6-.7 .5-.7 .3-.1-.1 0-.1 .5-.5 .3-.7 .2-.5 0-.6-.1-.6-.3-.7-.4-.5-.4-.4-.5-.3-.6-.3-.7 0-.7 .1-.6 .1-.5 .4-.5 .5-.3 .5-.2 .7-.1 1.5-1.4 5.1-.8 3.3-.3 .7-.5 .7-6 17.5 1.9 .1-.1 1.7-3.1-.2 1.1 1.4-1.3 1.1-2.1-2.8 .4-.2z"/><path class="wy-old" d="M40.8 50l.4-.2-4.1 0-4.2-12.5 2.5-1.7 4.3 .9 .6 1.9 .6-1.6 0-.3 2.4-7.8 0-.5 .1-.8 3.2-8.4 .4-.8 .6-.9 .9-1.2 .9-.9 1.3-.8 1.4-.6 1.2-.3 1.4-.1 1.3 .1 .6 .2 .8 .3 1.1 .6 .9 .7 .7 .9 .5 .9 .3 .9 .1 1.1-.1 .9-.3 .9-.4 .7-.6 .7-.6 .4-.6 .2-.1-.1 0-.1 .5-.5 .3-.7 .2-.5 0-.5-.1-.6-.2-.6-.3-.5-.4-.5-.5-.3-.6-.3-.7-.1-.6 0-.6 .1-.6 .3-.6 .5-.3 .4-.2 .5-.1 .5-.1 1.5-1.4 5.1-.8 3.3-.3 .7-.5 .7-6 17.5 1.9 .1-.1 1.7-3.1-.2 1.1 1.4-1.3 1.1zM49.6 17.1l.6 1.7-1.5 1.9 .4 .4 1.8-2.1-.7-2.1zM48.1 28.3l.5 1.8-1.7 1.8 .4 .4 1.9-2-.6-2.2zM37.9 41.7l1.7-1.5-.4-.4-1.7 1.4zM42.6 38.7l-1.5 2.8 1.1 2-1.3 2.6 .5 .2 1.5-2.8-1.1-2 1.4-2.5z"/></svg><span>wykonanie: <b>Wylinka</b></span></a>
+    </div>
+  </div>
+</footer>
+<script src="app.js" defer></script>
+</body>
+</html>
